@@ -1,0 +1,69 @@
+.addUser {
+    padding: 30px;
+
+    background-color: rgba(17, 25, 40, 0.94);
+    border-radius: 8px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    width: max-content;
+    height: max-content;
+}
+
+
+.addUser form {
+    display: flex;
+    gap: 20px;
+
+}
+
+.addUser input {
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.addUser button {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #3c62ff;
+    outline: none;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.user {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user__detail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user__detail img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+
+.addUser button {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #3c62ff;
+    color: white;
+    border: 0;
+    outline: none;
+}
