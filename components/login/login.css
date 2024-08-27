@@ -61,6 +61,10 @@
     font-weight: 500;
 }
 
+.loginContainer button:disabled {
+    background-color: rgba(60, 98, 255, 0.3);
+}
+
 .loginContainer .separator {
     height: 80%;
     width: 2px;

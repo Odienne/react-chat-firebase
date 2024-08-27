@@ -1,4 +1,5 @@
 import "./detail.css"
+import {auth} from "../../lib/firebase.js";
 
 const Detail = () => {
     return (
@@ -89,7 +90,7 @@ const Detail = () => {
 
                 </div>
                 <button className="detail__info__blockUser">Block user</button>
-                <button className="detail__info__logout">Logout</button>
+                <button onClick={() => auth.signOut()} className="detail__info__logout">Logout</button>
             </div>
         </div>
     );
