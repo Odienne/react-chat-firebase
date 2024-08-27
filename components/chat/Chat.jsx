@@ -1,11 +1,13 @@
 import "./chat.css"
 import EmojiPicker from "emoji-picker-react";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 const Chat = () => {
     const [emojiPicking, setEmojiPicking] = useState(false);
     const [text, setText] = useState("");
     const [caretPosition, setCaretPosition] = useState(0);
+
+    const endRef = useRef();
 
     const handleEmojiChoice = (e) => {
         setText(prev => prev.slice(0, caretPosition) + e.emoji + prev.slice(caretPosition));
@@ -16,6 +18,15 @@ const Chat = () => {
         setCaretPosition(e.target.selectionStart)
         setText(e.target.value);
     }
+
+
+    useEffect(() => {
+        return () => {
+            endRef.current?.scrollIntoView({behavior: "smooth"});
+        };
+    }, []);
+
+
     return (
         <div className="chat">
             <div className="chat__top">
@@ -70,6 +81,9 @@ const Chat = () => {
                     </div>
                 </div>
 
+                <div ref={endRef}>
+
+                </div>
             </div>
             <div className="chat__bottom">
                 <div className="chat__bottom__icons">

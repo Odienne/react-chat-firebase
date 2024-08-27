@@ -14,8 +14,8 @@ body {
     background-size: cover;
     color: white;
     display: flex;
-    height: 100vh;
     justify-content: center;
+    margin: 60px;
 }
 
 .container {
@@ -25,5 +25,4 @@ body {
     border-radius: 8px;
     display: flex;
     width: 90vw;
-    height: 90vh;
 }
