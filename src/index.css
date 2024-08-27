@@ -10,6 +10,8 @@
 body {
     align-items: center;
     background-image: url("/bg.jpg");
+    background-position: center;
+    background-size: cover;
     color: white;
     display: flex;
     height: 100vh;
