@@ -1,0 +1,91 @@
+.chatList {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chatList__search {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    padding: 18px;
+}
+
+.chatList__search__searchBar {
+    align-items: center;
+    background-color: rgba(17, 25, 40, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex: 1;
+    gap: 18px;
+    padding: 6px;
+}
+
+.chatList__search input {
+    background: none;
+    border: none;
+    color: white;
+    flex: 1;
+}
+
+.chatList__search__searchBar img {
+    width: 18px;
+    height: 18px;
+}
+
+.chatList__search .chatList__search__addRemove {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    background-color: rgba(17, 25, 40, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*chatlist*/
+.chatlist__conversations__conv {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    padding: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+}
+
+.chatlist__conversations__conv img {
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+}
+
+.chatlist__conversations__conv__latestMessage {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chatlist__conversations__conv__latestMessage span {
+    font-weight: 500;
+}
+
+.chatlist__conversations__conv__latestMessage p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+* {
+    scrollbar-color: rgba(17, 25, 40, 0.5) rgba(17, 25, 40, 0.1);;
+    scrollbar-width: thin;
+}
+
+/* Styling the scrollbar in Chrome and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(17, 25, 40, 0.5);; /* Set thumb color for Chrome and Safari */
+}
+
+*::-webkit-scrollbar-track {
+    background-color: rgba(17, 25, 40, 0.5);; /* Set track color for Chrome and Safari */
+}
