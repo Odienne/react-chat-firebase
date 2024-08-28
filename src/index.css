@@ -21,7 +21,7 @@ body {
     width: 80%;
 }
 
-root {
+root, html {
     width: 100%;
 }
 
@@ -33,6 +33,7 @@ root {
     display: flex;
     width: 90vw;
     height: auto;
+    min-height: 80vh;
 }
 
 .loading {
