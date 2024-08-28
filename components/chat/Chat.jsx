@@ -175,15 +175,17 @@ const Chat = () => {
                        placeholder={isCurrentUserBlocked || isReceiverBlocked ? "You cannot contact this person" : "Type a message..."}
                        onClick={handleInputChange}
                        onChange={handleInputChange}/>
-                <div className="chat__bottom__emoji">
-                    <img onClick={() => setEmojiPicking(!emojiPicking)} src="./emoji.png" alt="emoji"/>
-                    <div className="chat__bottom__emoji__pickerContainer">
-                        <EmojiPicker open={emojiPicking} onEmojiClick={handleEmojiChoice}/>
+                <div className="chat__bottom__send--flex">
+                    <div className="chat__bottom__emoji">
+                        <img onClick={() => setEmojiPicking(!emojiPicking)} src="./emoji.png" alt="emoji"/>
+                        <div className="chat__bottom__emoji__pickerContainer">
+                            <EmojiPicker open={emojiPicking} onEmojiClick={handleEmojiChoice}/>
+                        </div>
                     </div>
+                    <button className="chat__bottom__send"
+                            disabled={isCurrentUserBlocked || isReceiverBlocked}>Send
+                    </button>
                 </div>
-                <button className="chat__bottom__send"
-                        disabled={isCurrentUserBlocked || isReceiverBlocked}>Send
-                </button>
             </form>
         </div>
     );
