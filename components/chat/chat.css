@@ -106,10 +106,15 @@
 
 .chat__center__message__text span {
     font-size: 11px;
+    align-self: flex-start;
 }
 
 
 .chat__center__message__self {
+    align-self: flex-end;
+}
+
+.chat__center__message__self .chat__center__message__text span {
     align-self: flex-end;
 }
 
@@ -213,4 +218,12 @@
     position: absolute;
     bottom: 48px;
     left: 0;
+}
+
+.chat__bottom__loading {
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: rgba(17, 25, 40, 0.5);
+    font-style: italic;
 }

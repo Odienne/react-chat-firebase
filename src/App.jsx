@@ -33,11 +33,7 @@ const App = () => {
                     <List/>
                     {chatId ? <Chat/> : <div className="chat"/>
                     }
-                    {chatId ? <Detail/> :
-                        <div className="detail">
-                            <button onClick={() => auth.signOut()} className="detail__info__logout">Logout</button>
-                        </div>
-                    }
+                    {chatId ? <Detail/> : <div className="detail"/>}
                 </>
                 :
                 <Login/>

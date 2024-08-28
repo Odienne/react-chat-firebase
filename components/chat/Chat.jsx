@@ -14,6 +14,7 @@ const Chat = () => {
         file: null,
         url: ""
     });
+    const [loading, setLoading] = useState(false);
     const [chat, setChat] = useState([]);
     const [emojiPicking, setEmojiPicking] = useState(false);
     const [text, setText] = useState("");
@@ -36,12 +37,17 @@ const Chat = () => {
     const handleSend = async (e) => {
         e.preventDefault();
 
-        if (text === "") return;
+        if (text.trim() === "" && !img.file) {
+            toast.error("Please join a text message !")
+            return;
+        }
 
         let imgUrl = null;
 
         try {
             if (img.file) {
+                setLoading(true);
+
                 imgUrl = await upload(img.file);
             }
 
@@ -76,6 +82,8 @@ const Chat = () => {
 
         } catch (err) {
             toast.error("Error : " + err.message)
+        } finally {
+            setLoading(false);
         }
 
         setImg({
@@ -143,9 +151,10 @@ const Chat = () => {
                             {message.img &&
                                 <img src={message.img} alt="image"/>
                             }
-                            <p>
-                                {message.text}
-                            </p>
+                            {message.text &&
+                                <p>
+                                    {message.text}
+                                </p>}
                             <span><ReactTimeAgo date={message.createdAt.toDate()} locale="en-US"/></span>
                         </div>
                     </div>
@@ -162,6 +171,7 @@ const Chat = () => {
 
                 </div>
             </div>
+            {loading && <div className="chat__bottom__loading">Envoi en cours...</div>}
             <form onSubmit={handleSend} className="chat__bottom">
                 <div className="chat__bottom__icons">
                     <label htmlFor="file">
