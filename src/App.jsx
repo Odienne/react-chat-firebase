@@ -33,7 +33,8 @@ const App = () => {
                     <List/>
                     {chatId ? <Chat/> : <div className="chat"/>
                     }
-                    <Detail/>
+                    {chatId ? <Detail/> : <div className="detail"/>
+                    }
                 </>
                 :
                 <Login/>
