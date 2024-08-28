@@ -16,7 +16,13 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    margin: 60px;
+    margin: 20px auto;
+    height: 100%;
+    width: 80%;
+}
+
+root {
+    width: 100%;
 }
 
 .container {
@@ -26,7 +32,7 @@ body {
     border-radius: 8px;
     display: flex;
     width: 90vw;
-    height: 900px;
+    height: auto;
 }
 
 .loading {
@@ -34,4 +40,11 @@ body {
     font-size: 36px;
     border-radius: 8px;
     background-color: rgba(17, 25, 40, 0.5);
+}
+
+
+@media screen and (max-width: 768px ) {
+    .container {
+        flex-direction: column;
+    }
 }

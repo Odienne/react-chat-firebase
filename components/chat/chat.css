@@ -96,6 +96,7 @@
     background-color: rgba(60, 98, 255, 0.2);
     border-radius: 8px;
 }
+
 .chat__center__message__text img {
     width: 100%;
     height: 300px;
@@ -131,6 +132,35 @@
     padding: 20px;
     gap: 18px;
 }
+
+@media screen and (max-width: 768px ) {
+    .chat__bottom {
+        flex-direction: column;
+    }
+
+    .chat__bottom__icons {
+        align-self: flex-start;
+    }
+
+    .chat__bottom input {
+        width: 100%;
+    }
+
+    .chat__bottom__send--flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.chat__bottom__send--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
 
 .chat__bottom__icons {
     display: flex;
