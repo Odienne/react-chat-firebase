@@ -17,12 +17,13 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    margin: 20px auto;
-    height: 100%;
+    margin: 5vh auto;
+    height: 90vh;
     width: 80%;
 }
 
-root, html {
+#root, html {
+    height: 100%;
     width: 100%;
 }
 
@@ -32,9 +33,10 @@ root, html {
     border: 1px solid rgba(255, 255, 255, 0.125);
     border-radius: 8px;
     display: flex;
-    width: 90vw;
-    height: auto;
-    min-height: 80vh;
+    width: 100%;
+    height: 100%;
+
+    overflow-y: auto;
 }
 
 .loading {
