@@ -2,7 +2,7 @@ import {useState} from "react";
 import "./login.css"
 import {toast} from "react-toastify";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
-import {doc, getDoc, setDoc} from "firebase/firestore";
+import {doc, setDoc} from "firebase/firestore";
 import {auth, db} from "../../lib/firebase.js";
 import upload from "../../lib/upload.js";
 
@@ -31,7 +31,7 @@ const Login = () => {
 
         try {
             await signInWithEmailAndPassword(auth, email, password)
-            toast.success("Welcome !");
+            toast.success("Welcome!");
         } catch (err) {
             toast.error(err.message)
         } finally {
@@ -47,8 +47,8 @@ const Login = () => {
         const {username, email, password} = Object.fromEntries(formData);
 
         try {
+            const imgUrl = avatar.file ? await upload(avatar.file) : null;
             const response = await createUserWithEmailAndPassword(auth, email, password);
-            const imgUrl = avatar.file != null ? await upload(avatar.file) : null;
 
             const data = {
                 username,
@@ -60,11 +60,9 @@ const Login = () => {
 
             await setDoc(doc(db, "users", response.user.uid), data);
 
+            await setDoc(doc(db, "userchats", response.user.uid), {chats: []});
 
-            await setDoc(doc(db, "usersChat", response.user.uid), {chats: []});
-
-            await handleLogin(e);
-
+            toast.success("Welcome aboard!");
         } catch (err) {
             toast.error(err.message)
         } finally {
@@ -77,8 +75,8 @@ const Login = () => {
             <div className="login">
                 <h2>Welcome back</h2>
                 <form onSubmit={handleLogin}>
-                    <input type="text" placeholder="Email" name="email"/>
-                    <input type="password" placeholder="Password" name="password"/>
+                    <input type="text" placeholder="Email" name="email" required/>
+                    <input type="password" placeholder="Password" name="password" required/>
                     <button disabled={loading}>{loading ? "Loading..." : "Sign in"}</button>
                 </form>
             </div>

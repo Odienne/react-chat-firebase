@@ -52,12 +52,16 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
+
+    overflow-y: auto;
+    max-height: 280px;
 }
 
 .detail__info__options__option__pictures__picture {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .detail__info__options__option__pictures__picture__detail {

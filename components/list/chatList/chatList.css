@@ -55,12 +55,21 @@
     border-radius: 50%;
     height: 48px;
     width: 48px;
+    object-fit: cover;
 }
 
 .chatlist__conversations__conv__latestMessage {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.chatlist__conversations__conv__latestMessage--bold {
+    font-weight: bold;
+}
+
+.chatlist__conversations__conv__latestMessage--italic {
+    font-style: italic;
 }
 
 .chatlist__conversations__conv__latestMessage span {
@@ -70,6 +79,12 @@
 .chatlist__conversations__conv__latestMessage p {
     font-size: 14px;
     font-weight: normal;
+}
+
+.chatlist__conversations__conv__latestMessage small {
+    font-size: 11px;
+    font-weight: normal;
+    font-style: italic;
 }
 
 * {
