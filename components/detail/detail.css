@@ -1,0 +1,110 @@
+.detail {
+    flex: 1;
+}
+
+.detail__user {
+    align-items: center;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px 20px;
+}
+
+.detail__user img {
+    border-radius: 50%;
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
+
+}
+
+.detail__info {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding: 20px;
+}
+
+.detail__info__options {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.detail__info__options__option__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail__info__options__option__title img {
+    background-color: rgba(17, 25, 40, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    object-fit: cover;
+    width: 28px;
+    padding: 10px;
+}
+
+.detail__info__options__option__pictures {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    overflow-y: auto;
+    max-height: 280px;
+}
+
+.detail__info__options__option__pictures__picture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.detail__info__options__option__pictures__picture__detail {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.detail__info__options__option__pictures__picture__detail__img {
+    border-radius: 6px;
+    height: 40px;
+    object-fit: cover;
+    width: 40px;
+}
+
+.detail__info__options__option__pictures__picture__detail__download {
+    background-color: rgba(17, 25, 40, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    object-fit: cover;
+    width: 28px;
+    padding: 10px;
+}
+
+.detail__info__blockUser {
+    padding: 10px 20px;
+    background-color: rgba(204, 70, 87, 0.89);
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 6px;
+}
+
+.detail__info__blockUser:hover {
+    background-color: rgb(204, 70, 87);
+}
+
+.detail__info__logout {
+    padding: 10px;
+    background-color: #3c62ff;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 6px;
+}

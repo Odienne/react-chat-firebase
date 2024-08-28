@@ -1,0 +1,72 @@
+.loginContainer {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.login, .signup {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loginContainer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.loginContainer form img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0.6;
+}
+
+.loginContainer input {
+    border: 0;
+    outline: none;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgba(17, 25, 40, 0.5);
+}
+
+.loginContainer label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.loginContainer button {
+    width: 100%;
+    padding: 20px;
+    background-color: #3c62ff;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 6px;
+    border: 0;
+    font-weight: 500;
+}
+
+.loginContainer button:disabled {
+    background-color: rgba(60, 98, 255, 0.3);
+}
+
+.loginContainer .separator {
+    height: 80%;
+    width: 2px;
+    background-color: rgba(200, 200, 200, 0.1);
+}
